@@ -6,11 +6,11 @@ noAstroids = 200; //sets the number (no) of astroids to 200
 
 function preload(){
   soundFormats("mp3");
-  theme = loadSound("theme.mp3")
-  coinEffect = loadSound("mario_coin_sound.mp3");
-  crashEffect = loadSound("glass_effect.mp3");
+  theme = loadSound("audio/music/theme.mp3")
+  coinEffect = loadSound("audio/SFX/mario_coin_sound.mp3");
+  crashEffect = loadSound("audio/SFX/glass_effect.mp3");
 
-  planet = loadImage("planet.jpg");
+  planet = loadImage("images/planet.jpg");
 }
 
 function setup(){
@@ -21,7 +21,7 @@ function setup(){
   astroids = new Group(); //creates group 'astroids'
 
   rocket = new Sprite(40, 300, 29, 11); //creates rocket
-  rocket.img = "spaceship.png";
+  rocket.img = "images/spaceship.png";
   rocket.layer = 1;
 
   exit = new Sprite(width-20, height/2, 20, 200, "static"); //creates exit for rocket
@@ -57,7 +57,7 @@ function setup(){
 
   for (var i = 0;i<noAstroids;i++){
     astroid = new astroids.Sprite(random(100, width-100), random(height), 10, "triangle"); //creates n astroids between inserted coords
-    astroid.img = "astroids.png";
+    astroid.img = "images/astroids.png";
     astroid.direction = random(360);
     astroid.speed = 0.05;
     astroid.bounciness = 0.8;
