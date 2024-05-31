@@ -4,6 +4,7 @@ level = 1; //sets level variable to 1
 lives = 4; //sets lives variable to 4
 noAstroids = 200; //sets the number (no) of astroids to 200
 
+// preloads media
 function preload(){
   soundFormats("mp3");
   theme = loadSound("audio/music/theme.mp3")
